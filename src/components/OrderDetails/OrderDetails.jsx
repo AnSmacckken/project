@@ -2,7 +2,6 @@
 
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "next/navigation";
 import { orderContext } from "../../Context/OrderContext";
 import Loading from "../Loading/Loading";
 import EmptyContent from "../EmptyContent/EmptyContent";
@@ -10,8 +9,7 @@ import emptyOrders from "../../assets/images/emptyOrders.svg";
 import "./OrderDetails.css";
 import { Helmet } from "react-helmet";
 
-export default function OrderDetails() {
-  const params = useParams();
+export default function OrderDetails({ params }) {
   const orderId = params?.orderId;
   const [isloading, setIsLoading] = useState(true);
   let { getUserAllOrders, allOrders, setAllOrders } = useContext(orderContext);

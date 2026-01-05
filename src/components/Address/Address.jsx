@@ -3,13 +3,12 @@
 import { useFormik } from "formik";
 import React, { useState } from "react";
 import { useContext } from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import * as Yup from "yup";
 import { cartContext } from "../../Context/CartContext";
 import { toast } from "react-toastify";
 
-export default function Address() {
-  const params = useParams();
+export default function Address({ params }) {
   const cartId = params?.cartId;
   const [isLodaing, setIsloading] = useState(false);
   const [errorMsg, setErrorMsg] = useState(false);

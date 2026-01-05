@@ -3,10 +3,8 @@
 import React, { useState } from "react";
 import ProductsSlider from "../ProductsSlider/ProductsSlider";
 import ProductDetails from "../ProductDetails/ProductDetails";
-import { useParams } from "next/navigation";
 
-export default function ProductDetailsPage() {
-  const params = useParams();
+export default function ProductDetailsPage({ params }) {
   const id = params?.id;
   const [categoryId, setCategoryId] = useState(null);
   return (

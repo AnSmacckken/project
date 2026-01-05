@@ -1,33 +1,126 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
+# Dependencies
+node_modules/
 /.pnp
 .pnp.js
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# testing
+# Testing
 /coverage
+*.lcov
+.nyc_output
 
-# next.js
+# Next.js
 /.next/
 /out/
+next-env.d.ts
+*.tsbuildinfo
 
-# production
+# Production
 /build
+/dist
 
-# misc
+# Misc
 .DS_Store
 *.pem
+*.log
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-# debug
+# Debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
+# Local env files (IMPORTANT: Never commit these!)
+.env
+.env.local
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# vercel
+# Keep .env.example (template file)
+!.env.example
+
+# Vercel
 .vercel
 
-# typescript
+# TypeScript
 *.tsbuildinfo
-next-env.d.ts
+
+# OS
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Large files and binaries (to avoid pushing large files to GitHub)
+# Large compiled files
+*.wasm
+*.node
+*.map
+*.bundle.js
+
+# Large image files (keep only optimized images)
+# Uncomment if you have very large uncompressed images
+# *.jpg
+# *.jpeg
+# *.png
+
+# Large data files
+*.json.bak
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+
+# Video and audio files (usually too large for Git)
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mp3
+*.wav
+*.flac
+*.aac
+
+# Archive files
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.bz2
+
+# Package manager lock files (optional - some prefer to commit these)
+# Uncomment if you want to ignore lock files
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml

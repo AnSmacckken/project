@@ -1,7 +1,18 @@
 {
-  "name": "e-commerce-app",
+  "name": "freshcart-ecommerce",
   "version": "0.1.0",
+  "description": "A modern ecommerce application built with Next.js 14",
   "private": true,
+  "keywords": [
+    "nextjs",
+    "react",
+    "ecommerce",
+    "shopping-cart",
+    "next.js",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

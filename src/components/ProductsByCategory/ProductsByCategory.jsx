@@ -3,7 +3,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
 import { baseUrl } from "../../utils/baseUrl";
 import Product from "../Product/Product";
 import Loading from "../Loading/Loading";
@@ -11,8 +10,7 @@ import emptyProducts from "../../assets/images/emptyProducts.svg";
 import EmptyContent from "../EmptyContent/EmptyContent";
 import { Helmet } from "react-helmet";
 
-export default function ProductsByCategory() {
-  const params = useParams();
+export default function ProductsByCategory({ params }) {
   const categoryName = params?.categoryName;
   const categoryId = params?.categoryId;
   const [productsList, setProductsList] = useState([]);
