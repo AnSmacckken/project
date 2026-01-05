@@ -2,13 +2,13 @@
 
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect, useState } from "react";
+import Head from "next/head";
 import { cartContext } from "../../Context/CartContext";
 import Loading from "./../Loading/Loading";
 import CartItem from "../CartItem/CartItem";
 import emptyCart from "../../assets/images/emptyCart.svg";
 import EmptyContent from "../EmptyContent/EmptyContent";
 import Link from "next/link";
-import { Helmet } from "react-helmet";
 
 export default function Cart() {
   const { setCartCounter, getCart, clearCart } = useContext(cartContext);

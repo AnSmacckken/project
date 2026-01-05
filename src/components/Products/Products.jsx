@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import Head from "next/head";
 import Loading from "../Loading/Loading";
 import Product from "../Product/Product";
 // import { useQuery } from "react-query";
@@ -7,7 +8,6 @@ import { baseUrl } from "./../../utils/baseUrl";
 import "./Products.css";
 import emptyProducts from "../../assets/images/emptyProducts.svg";
 import EmptyContent from "../EmptyContent/EmptyContent";
-import { Helmet } from "react-helmet";
 import Pagination from "../Pagination/Pagination";
 import { useEffect } from "react";
 
@@ -54,11 +54,10 @@ export default function Products() {
 
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
+      <Head>
         <title>FreshCart-Products</title>
         <meta name="keywords" content="FreshCart-App-Ecommerce-Products" />
-      </Helmet>
+      </Head>
       <div className="container my-5 pt-5">
         <div className="d-flex justify-content-between align-items-center my-3  overflow-hidden">
           <h2 className="h3">Products</h2>

@@ -1,12 +1,17 @@
 import React from "react";
+import Head from "next/head";
 import MainSlider from "../MainSlider/MainSlider";
 import CategoriesSlider from "../CategoriesSlider/CategoriesSlider";
 import Products from "./../Products/Products";
-import { Helmet } from "react-helmet";
 import ProductsSlider from "../ProductsSlider/ProductsSlider";
+
 export default function HomePage() {
   return (
     <>
+      <Head>
+        <title>FreshCart-Home</title>
+        <meta name="keywords" content="FreshCart-App-Ecommerce" />
+      </Head>
       <MainSlider />
       {/* <ProductsSlider
         categoryId={"6439d58a0049ad0b52b9003f"}
@@ -18,11 +23,6 @@ export default function HomePage() {
       /> */}
       <CategoriesSlider />
       <Products />
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>FreshCart-Home</title>
-        <meta name="keywords" content="FreshCart-App-Ecommerce" />
-      </Helmet>
     </>
   );
 }
