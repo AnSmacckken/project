@@ -16,6 +16,8 @@ import OrderContextProvider from '../src/Context/OrderContext'
 import { ToastContainer } from 'react-toastify'
 import { Offline } from 'react-detect-offline'
 
+export const dynamic = 'force-dynamic'
+
 let query = new QueryClient()
 
 export default function RootLayout({ children }) {
