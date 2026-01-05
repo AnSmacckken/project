@@ -1,0 +1,13 @@
+'use client'
+
+import React from 'react'
+import Navbar from '../../src/components/Navbar/Navbar'
+
+export default function AuthLayout({ children }) {
+  return (
+    <>
+      <Navbar />
+      {children}
+    </>
+  )
+}
